@@ -1,26 +1,35 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import CartIcon from './CartIcon'
 import CartContext from './Cart-Context'
-import '../components/HeaderCartButton.css'
+import classes from '../components/HeaderCartButton.css'
 
 function HeaderCartButton (props) {
+  const  [btnIsHighlighted, setBtnIsHighlighted] = useState(false)
   const cartCtx = useContext(CartContext)
 
-  const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
+  const { items } = cartCtx
+
+  const numberOfCartItems = items.reduce((curNumber, item) => {
     return curNumber + item.amount;
   }, 0);
 
-  const  btnClasses ='button bump'
+  const  btnClasses = `${classes.button} ${btnIsHighlighted ? classes.bump: ''}`
 
-  useEffect(() => {}, [])
+  useEffect(() => {
+    if (items.length === 0) {
+      return
+    }
+    setBtnIsHighlighted(true)
+
+  }, [items])
 
   return (
     <button className={btnClasses} onClick={props.onClick}>
-        <span className='icon'>
+        <span className={classes.icon}>
             <CartIcon />
         </span>
         <span>Your Cart</span>
-        <span className='badge'>
+        <span className={classes.badge}>
             {numberOfCartItems}
         </span>
     </button>
