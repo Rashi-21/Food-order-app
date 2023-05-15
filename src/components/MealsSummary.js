@@ -3,7 +3,7 @@ import '../components/MealsSummary.css'
 
 function MealsSummary () {
   return (
-    <section className='summary'>
+    <section className='summary-1'>
         <h2>Delicious Food, Delivered to You</h2>
         <p>
           Choose your favorite meal from our brand selection of avilable meals and enjoy a delicious lunch or dinner at home.
