@@ -62,3 +62,24 @@
     border-color: #aa0b20;
     background-color: #ffeff1;
 }
+
+/* Media Query for Smartphones */
+@media (max-width: 768px) {
+    .form-1 {
+        margin: 0.5rem 0; /* Reduced margin for smaller screens */
+    }
+
+    .control input {
+        height: 2.5rem; /* Maintain a comfortable height */
+    }
+
+    .actions {
+        flex-direction: column; /* Ensure buttons stack vertically */
+        gap: 0.5rem; /* Maintain a small gap */
+    }
+
+    .actions button {
+        padding: 0.5rem; /* Adjust padding for smaller buttons */
+        width: 100%; /* Ensure buttons take full width */
+    }
+}

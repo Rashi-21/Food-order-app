@@ -6,7 +6,7 @@
     color: white;
     padding: 0.75rem 3rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-radius: 25px;
     font-weight: bold;
@@ -55,5 +55,30 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .button {
+        padding: 0.75rem 2rem; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Slightly smaller font size for smaller screens */
+    }
+
+    .icon {
+        width: 1.5rem; /* Smaller icon size for mobile */
+        height: 1.5rem;
+    }
+
+    .badge {
+        padding: 0.25rem 1rem; /* Adjust badge padding for mobile */
+        font-size: 0.9rem; /* Smaller font size for badge */
+    }
+
+    .button:hover .button:active {
+    background-color: #2c0d00;
+    }
+
+    .bump {
+        animation: bump 300ms ease-out;
     }
 }

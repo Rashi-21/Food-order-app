@@ -27,3 +27,23 @@
     object-fit: cover;
     transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
 }
+
+@media (max-width: 768px) {
+    .main-image {
+        height: 15rem; /* Reduced height for smaller screens */
+    }
+
+    .header {
+        width: 100%;
+        justify-content: space-around;
+        padding: 0;
+    }
+}
+
+/* Media Query for Smartphones */
+@media (max-width: 768px) {
+    .main-image img {
+        width: 100%; /* Adjusted width to fit the screen */
+        transform: rotateZ(-3deg) translateY(-2rem) translateX(0); /* Adjusted transform for better fit */
+    }
+}
