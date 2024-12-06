@@ -57,7 +57,7 @@ function Checkout (props) {
         const cityControlClasses = `${classes.control} ${formInputValidity.city ? '' : classes.invalid}`
 
         return (
-            <form className={classes.form-1} onSubmit={confirmHandler}>
+            <form className={classes['form-1']} onSubmit={confirmHandler}>
                 <div className={nameControlClasses}>
                     <label htmlFor='name'>Your Name</label>
                     <input type='text' id='name' ref={nameInputRef} />

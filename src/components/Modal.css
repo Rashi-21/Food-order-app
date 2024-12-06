@@ -19,6 +19,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     z-index: 30;
     animation: slide-down 300ms ease-out forwards;
+    height: 100%;
 }
 
 @keyframes slide-down {
@@ -35,7 +36,7 @@
 @media (max-width: 768px) {
     .modal {
         top: 10vh; /* Adjusted top position for better centering on smaller screens */
-        left: 5%; /* Keep left position the same */
+        left: 3%; /* Keep left position the same */
         width: 90%; /* Keep width the same */
         padding: 0.5rem; /* Reduced padding for smaller screens */
         border-radius: 10px; /* Slightly reduced border radius for a more compact look */

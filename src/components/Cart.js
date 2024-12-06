@@ -6,7 +6,7 @@ import CartItem from './CartItem';
 import Checkout from './Checkout';
 
 function Cart (props) {
-  const [ ischeckout, setIsCheckout ] = useState(false)
+  const [ isCheckout, setIsCheckout ] = useState(false)
 
   const[isSubmitting, setIsSubmitting] = useState(false)
 
@@ -57,13 +57,13 @@ function Cart (props) {
             <span>Total Amount</span>
             <span>{totalAmount}</span>
         </div>
-        {ischeckout && <Checkout onConfirm={submitOrderHandler} onCancel={props.onClose}/>}
-        {!ischeckout && modalActions }
+        {isCheckout && <Checkout onConfirm={submitOrderHandler} onCancel={props.onClose}/>}
+        {!isCheckout && modalActions }
     </React.Fragment>)
 
     const isSubmittingModalContent = <p>Sending order data...</p>
 
-    const didSumbitModalContent = <React.Fragment><p>Successfully sent the order!</p>
+    const didSubmitModalContent = <React.Fragment><p>Successfully sent the order!</p>
     <div className='action'>
     <button className='button' onClick={props.onClose}>Close</button>
     </div>
@@ -73,7 +73,7 @@ function Cart (props) {
     <Modal onClose={props.onClose}>
       {!isSubmitting && !didSubmit && cartModalContent}
       {isSubmitting && isSubmittingModalContent}
-      {!isSubmitting && didSubmit && didSumbitModalContent}     
+      {!isSubmitting && didSubmit && didSubmitModalContent}     
     </Modal>
   )
 }
