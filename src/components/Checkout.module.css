@@ -1,7 +1,7 @@
 .form-1 {
     margin: 1rem 0;
-    height: 19rem;
-    overflow: auto;
+    height: auto; /* Change height to auto to accommodate content */
+    overflow: visible; /* Allow content to be visible */
 }
 
 .control {
@@ -24,8 +24,8 @@
 
 .actions {
     display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
+    justify-content: flex-end; /* Align buttons to the end */
+    gap: 1rem; /* Space between buttons */
 }
 
 .actions button {
@@ -36,6 +36,7 @@
     border: none;
     border-radius: 25px;
     padding: 0.5rem 2rem;
+    border: 3px solid #aa0b20e6;
 }
 
 .actions button:hover,
@@ -63,10 +64,13 @@
     background-color: #ffeff1;
 }
 
+
+
 /* Media Query for Smartphones */
 @media (max-width: 768px) {
     .form-1 {
         margin: 0.5rem 0; /* Reduced margin for smaller screens */
+        height: auto; /* Allow height to adjust based on content */
     }
 
     .control input {
@@ -76,10 +80,17 @@
     .actions {
         flex-direction: column; /* Ensure buttons stack vertically */
         gap: 0.5rem; /* Maintain a small gap */
+        align-items: stretch; /* Ensure buttons take full width */
     }
 
     .actions button {
         padding: 0.5rem; /* Adjust padding for smaller buttons */
         width: 100%; /* Ensure buttons take full width */
+        font-size: 1rem; /* Adjust font size for better readability */
     }
+
+    .actions button:hover,
+    .actions button:active {
+        background-color: #ffe6dc;
+}
 }
