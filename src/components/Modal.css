@@ -34,7 +34,7 @@
 
 @media (max-width: 768px) {
     .modal {
-        top: 6vh; /* Adjusted top position for better centering on smaller screens */
+        top: 1%; /* Adjusted top position for better centering on smaller screens */
         left: 3%; /* Keep left position the same */
         width: 90%; /* Keep width the same */
         padding: 0.5rem; /* Reduced padding for smaller screens */
